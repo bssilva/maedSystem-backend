@@ -6,8 +6,9 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 //Conectando com Banco de Dados
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true 
-                                        , useUnifiedTopology: true}
+mongoose.connect("mongodb+srv://<admin>:<admin>@cluster0.r4pv3.mongodb.net/<dbname>?retryWrites=true&w=majority"
+                , { useNewUrlParser: true 
+                , useUnifiedTopology: true}
                                                  );
 mongoose.set("useCreateIndex", true);
 requireDir("./src/models/Cadastro");
@@ -24,4 +25,4 @@ app.use(cors());
 //Rotas
 app.use("/", require("./src/routes"));
 
-app.listen(5000);
+app.listen(process.env.PORT || 5000);
