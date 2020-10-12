@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 //Conectando com Banco de Dados
-mongoose.connect("mongodb+srv://deploy:deploy@cluster0.r4pv3.mongodb.net/nodeapi?retryWrites=true&w=majority"
+mongoose.connect(process.env.MONGO_URL
                 , { useNewUrlParser: true 
                 , useUnifiedTopology: true}
                                                  );
