@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 //Conectando com Banco de Dados
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true 
-                                                 ,   useUnifiedTopology: true}
+                                        , useUnifiedTopology: true}
                                                  );
 mongoose.set("useCreateIndex", true);
 requireDir("./src/models/Cadastro");

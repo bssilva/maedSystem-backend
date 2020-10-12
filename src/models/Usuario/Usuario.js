@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+//const bcrypt = require('bcrypt');
 
 const User = new mongoose.Schema({
     nome_usuario: String ,
@@ -9,6 +9,7 @@ const User = new mongoose.Schema({
     timestamps:true
 });
 
+/*
 // Criptografia da Senha
 User.pre('save', function(next){
     if(!this.isModified("senha_usuario")){
@@ -26,5 +27,5 @@ User.pre('findOneAndUpdate', function(next){
     }
     next();
 })
-
+*/
 mongoose.model("Usuarios", User);
