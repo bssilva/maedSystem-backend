@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "frontend": "npm start --prefix frontend",
+    "index": "nodemon index.js",
+    "dev": "concurrently \"npm run index \" \"npm run frontend\" ",
     "start": "node index.js"
   },
   "keywords": [],
